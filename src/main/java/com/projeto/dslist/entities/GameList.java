@@ -15,15 +15,15 @@ public class GameList {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long id;
-	public String nome;
+	public String name;
 	
 	public GameList() {
 	}
 
-	public GameList(Long id, String nome) {
+	public GameList(Long id, String name) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -34,17 +34,17 @@ public class GameList {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, nome);
+		return Objects.hash(id, name);
 	}
 
 	@Override
@@ -56,7 +56,7 @@ public class GameList {
 		if (getClass() != obj.getClass())
 			return false;
 		GameList other = (GameList) obj;
-		return Objects.equals(id, other.id) && Objects.equals(nome, other.nome);
+		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
 	}
 }
 
